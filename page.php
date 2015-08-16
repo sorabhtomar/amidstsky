@@ -7,9 +7,9 @@
  * and that other 'pages' on your WordPress site may use a
  * different template.
  *
- * @link https://codex.wordpress.org/Template_Hierarchy
- *
  * @package Amidst Sky
+ * @author Deepak Bansal
+ * @link http://deepak.tech
  */
 
 get_header(); ?>

@@ -2,9 +2,9 @@
 /**
  * Template part for displaying page content in page.php.
  *
- * @link https://codex.wordpress.org/Template_Hierarchy
- *
  * @package Amidst Sky
+ * @author Deepak Bansal
+ * @link http://deepak.tech
  */
 
 ?>

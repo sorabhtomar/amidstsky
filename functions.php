@@ -5,6 +5,8 @@
  * @link https://codex.wordpress.org/Functions_File_Explained
  *
  * @package Amidst Sky
+ * @author Deepak Bansal
+ * @link http://deepak.tech
  */
 
 if ( ! function_exists( 'amidstsky_setup' ) ) :
@@ -73,9 +75,15 @@ function amidstsky_setup() {
 
 	// Set up the WordPress core custom background feature.
 	add_theme_support( 'custom-background', apply_filters( 'amidstsky_custom_background_args', array(
-		'default-color' => 'ffffff',
+		'default-color' => 'eeeeee',
 		'default-image' => '',
 	) ) );
+
+	/*
+	 * This theme styles the visual editor to resemble the theme style,
+	 * specifically font, colors, icons, and column width.
+	 */
+	add_editor_style( array( 'css/editor-style.css', 'genericons/genericons.css', amidstsky_fonts() ) );
 }
 endif; // amidstsky_setup
 add_action( 'after_setup_theme', 'amidstsky_setup' );
@@ -114,7 +122,9 @@ add_action( 'widgets_init', 'amidstsky_widgets_init' );
  * Enqueue scripts and styles.
  */
 function amidstsky_scripts() {
+	wp_enqueue_style( 'amidstsky-fonts', amidstsky_fonts() );
 	wp_enqueue_style( 'amidstsky-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'amidstsky-icons', get_template_directory_uri() . '/genericons/genericons/genericons.css' );
 
 	wp_enqueue_script( 'amidstsky-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 

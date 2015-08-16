@@ -2,9 +2,9 @@
 /**
  * The template for displaying search results pages.
  *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
- *
  * @package Amidst Sky
+ * @author Deepak Bansal
+ * @link http://deepak.tech
  */
 
 get_header(); ?>

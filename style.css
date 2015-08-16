@@ -1,14 +1,14 @@
 /*
 Theme Name: Amidst Sky
-Theme URI: http://underscores.me/
+Theme URI: http://amidstsky.com/
 Author: Deepak Bansal
 Author URI: http://deepak.tech
-Description: New
+Description: A customizable theme, developed for personal blogs and blogs with longform content.
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: amidstsky
-Tags:
+Tags: gray, red, purple, white, light, two-columns, left-sidebar, responsive-layout, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, post-formats, sticky-post, threaded-comments, translation-ready
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
@@ -19,30 +19,6 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 */
-
-/*--------------------------------------------------------------
->>> TABLE OF CONTENTS:
-----------------------------------------------------------------
-# Normalize
-# Typography
-# Elements
-# Forms
-# Navigation
-	## Links
-	## Menus
-# Accessibility
-# Alignments
-# Clearings
-# Widgets
-# Content
-    ## Posts and pages
-	## Asides
-	## Comments
-# Infinite scroll
-# Media
-	## Captions
-	## Galleries
---------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
 # Normalize
@@ -92,10 +68,12 @@ template {
 
 a {
 	background-color: transparent;
+	text-decoration: none;
 }
 
 a:active,
-a:hover {
+a:hover,
+a:visited {
 	outline: 0;
 }
 
@@ -271,10 +249,11 @@ button,
 input,
 select,
 textarea {
-	color: #404040;
+	color: #4b4b4b;
 	font-size: 16px;
 	font-size: 1rem;
 	line-height: 1.5;
+	font-family: 'Montserrat';
 }
 
 h1,
@@ -284,6 +263,16 @@ h4,
 h5,
 h6 {
 	clear: both;
+	font-family: 'Montserrat';
+}
+
+h1:first-child,
+h2:first-child,
+h3:first-child,
+h4:first-child,
+h5:first-child,
+h6:first-child {
+	margin-top: 0;
 }
 
 p {
@@ -298,7 +287,22 @@ i {
 }
 
 blockquote {
-	margin: 0 1.5em;
+	padding: .5em 1.5em;
+    border-left: 4px solid #ccc;
+    margin: 1.5em 0;
+    font-style: italic;
+    font-size: 1.2em;
+}
+
+blockquote p {
+	margin-bottom: 0;
+}
+
+blockquote cite,
+blockquote small {
+	opacity: .8;
+	font-size: 15px;
+	line-height: 1.6471;
 }
 
 address {
@@ -356,19 +360,24 @@ html {
 }
 
 body {
-	background: #fff; /* Fallback for when there is no custom background color defined. */
+	background: #f1f1f1; /* Fallback for when there is no custom background color defined. */
+}
+
+blockquote {
+	position: relative;
+	z-index: 9999;
 }
 
 blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-	content: "";
-}
-
-blockquote,
-q {
-	quotes: "" "";
+q:before {
+	content: '\f106';
+    font-family: "Genericons";
+    font-size: 4em;
+    position: absolute;
+    color: #f1f1f1;
+    left: 0;
+    top: 0;
+    z-index: -1;
 }
 
 hr {
@@ -380,7 +389,7 @@ hr {
 
 ul,
 ol {
-	margin: 0 0 1.5em 3em;
+	margin: 0 0 1.5em -1em;
 }
 
 ul {
@@ -416,33 +425,86 @@ table {
 }
 
 /*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+
+.site-content {
+	margin-top: 2em;
+}
+
+.content-area {
+	width: 100%;
+}
+
+.widget-area {
+	width: 100%;
+	padding: 0 2em;
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+
+.site-header {
+	text-align: center;
+	border-bottom: 1px solid rgba(0,0,0,.1);
+}
+
+.site-branding {
+	border-bottom: 1px solid rgba(0,0,0,.1);
+	margin-bottom: .5em;
+}
+
+/*--------------------------------------------------------------
+# Entry
+--------------------------------------------------------------*/
+
+.entry-header {
+	padding: 8em 2em 2em;
+	background-color: rgba(0,0,0,.8);
+	background-blend-mode: color-burn;
+	color: rgba(255,255,255,.8);
+	background-attachment: fixed;
+}
+
+.entry-title {
+	text-transform: uppercase;
+	font-size: 1.2em;
+	height: 100%;
+	color: #fff;
+	text-shadow: 0 0 8px rgba(0,0,0,1);
+}
+
+.entry-title a {
+	color: #fff;
+}
+
+.entry-footer {
+	padding: 0 2em;
+}
+
+
+/*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
 button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-	border: 1px solid;
-	border-color: #ccc #ccc #bbb;
+	border: none;
 	border-radius: 3px;
-	background: #e6e6e6;
-	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
-	color: rgba(0, 0, 0, .8);
-	font-size: 12px;
-	font-size: 0.75rem;
+	background: #D32F2F;
+	/* box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.5), inset 0 15px 17px rgba(0, 0, 0, 0.1), inset 0 -5px 12px rgba(255, 255, 255, 0.05); */
+	color: rgba(255, 255, 255, .8);
 	line-height: 1;
 	padding: .6em 1em .4em;
-	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+	box-shadow: 0 0 3px rgba(0,0,0,.3);
 }
 
 button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
-input[type="submit"]:hover {
-	border-color: #ccc #bbb #aaa;
-	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02);
-}
-
+input[type="submit"]:hover,
 button:focus,
 input[type="button"]:focus,
 input[type="reset"]:focus,
@@ -451,8 +513,8 @@ button:active,
 input[type="button"]:active,
 input[type="reset"]:active,
 input[type="submit"]:active {
-	border-color: #aaa #bbb #bbb;
-	box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15);
+	color: rgba(255, 255, 255, 1);
+	box-shadow: 0 0 3px rgba(0,0,0,.6);
 }
 
 input[type="text"],
@@ -495,17 +557,13 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a {
-	color: royalblue;
-}
-
-a:visited {
-	color: purple;
+	color: #D32F2F;
 }
 
 a:hover,
 a:focus,
 a:active {
-	color: midnightblue;
+	text-decoration: underline;
 }
 
 a:focus {
@@ -522,9 +580,9 @@ a:active {
 --------------------------------------------------------------*/
 .main-navigation {
 	clear: both;
-	display: block;
-	float: left;
-	width: 100%;
+	display: inline-block;
+	margin: 0 auto;
+	margin-bottom: .5em;
 }
 
 .main-navigation ul {
@@ -542,15 +600,20 @@ a:active {
 .main-navigation a {
 	display: block;
 	text-decoration: none;
+	padding: .5em .8em;
+	border-radius: 2px;
+	color: #4b4b4b;
+	transition: all .5s ease-out;
 }
 
 .main-navigation ul ul {
-	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 .2em 1em rgba(0, 0, 0, 0.3);
 	float: left;
 	position: absolute;
-	top: 1.5em;
+	top: 100%;
 	left: -999em;
 	z-index: 99999;
+	background: #fff;
 }
 
 .main-navigation ul ul ul {
@@ -568,6 +631,8 @@ a:active {
 
 .main-navigation li:hover > a,
 .main-navigation li.focus > a {
+	background: #eee;
+	box-shadow: 0 0 .5em rgba(0,0,0,.1) inset;
 }
 
 .main-navigation ul ul :hover > a,
@@ -596,12 +661,15 @@ a:active {
 /* Small menu. */
 .menu-toggle,
 .main-navigation.toggled ul {
-	display: block;
+	display: inline-block;
 }
 
 @media screen and (min-width: 37.5em) {
 	.menu-toggle {
 		display: none;
+	}
+	.main-navigation {
+		margin-bottom: 0;
 	}
 	.main-navigation ul {
 		display: block;
@@ -628,6 +696,58 @@ a:active {
 	float: right;
 	text-align: right;
 	width: 50%;
+}
+
+.comment-navigation a,
+.posts-navigation a {
+	border: none;
+	border-radius: 3px;
+	background: #D32F2F;
+	color: rgba(255, 255, 255, .8);
+	line-height: 2em;
+	padding: 1em;
+	box-shadow: 0 0 3px rgba(0,0,0,.3);
+	text-decoration: none;
+}
+
+.comment-navigation a:hover,
+.posts-navigation a:hover{
+	color: rgba(255, 255, 255, 1);
+	box-shadow: 0 0 3px rgba(0,0,0,.6);
+}
+
+.post-navigation {
+	padding: 0 2em;
+}
+
+.nav-previous a:before,
+.nav-next a:after {
+	content: '\f430';
+	font-size: 1.4em;
+	vertical-align: sub;
+	text-align: center;
+	-moz-transition: color .1s ease-in 0;
+	-webkit-transition: color .1s ease-in 0;
+	display: inline-block;
+	font-family: "Genericons";
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	line-height: 1;
+	text-decoration: inherit;
+	text-transform: none;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	speak: none;
+	margin-right: 2px;
+	text-decoration: none;
+}
+
+.nav-previous a:before {
+	content: '\f430'; 
+}
+.nav-next a:after {
+	content: '\f429';
 }
 
 /*--------------------------------------------------------------
@@ -740,7 +860,7 @@ a:active {
 }
 
 .hentry {
-	margin: 0 0 1.5em;
+	margin: 0 0 2.5em;
 }
 
 .byline,
@@ -757,6 +877,11 @@ a:active {
 .entry-content,
 .entry-summary {
 	margin: 1.5em 0 0;
+	line-height: 1.8em;
+    color: #000;
+    font-family: 'Libre Baskerville';
+    padding: 0 2em;
+    font-size: 14px;
 }
 
 .page-links {
@@ -775,6 +900,11 @@ a:active {
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/
+
+.comments-area {
+	padding: 0 2em;
+}
+
 .comment-content a {
 	word-wrap: break-word;
 }
@@ -782,6 +912,110 @@ a:active {
 .bypostauthor {
 	display: block;
 }
+
+.comment-content a {
+	word-wrap: break-word;
+}
+
+.bypostauthor {
+	display: block;
+}
+
+.comment-list,
+.children {
+    list-style: none;
+}
+
+.comment-list,
+.comment,
+.children {
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.reply,
+.comment-meta {
+    position: relative;
+}
+
+.comment-author .avatar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 48px;
+    max-width: 48px;
+    height: 48px;
+    vertical-align: middle;
+}
+
+.comment-author .fn {
+    margin-left: 48px;
+    padding-left: 1em;
+}
+
+.comment-meta .comment-metadata {
+    margin-left: 48px;
+    padding-left: 1em;
+    font-size: small;
+}
+
+.reply {
+    text-align:right;
+}
+
+#cancel-comment-reply-link {
+	font-size: smaller;
+	float: right;
+	padding-right: 1em;
+}
+
+.comment-body {
+    border-bottom: 1px solid rgba(0,0,0,.1);
+    margin-bottom: 1.2em;
+    padding-bottom: 1em;
+    font-weight: 300;
+}
+
+.children {
+    margin-left: 1em;
+}
+
+.comment-reply-link:hover {
+    text-decoration: none;
+}
+
+input[type=text],
+input[type=email],
+input[type=url],
+select,
+textarea {
+	width: 100%;
+	padding: .3em .5em;
+	border: 1px solid rgba(0,0,0,.2);
+	color: #666;
+	box-shadow: 0 0 5px rgba(0,0,0,.1) inset;
+	background: #fafafa;
+	transition: all .3s;
+}
+
+input[type=text]:active,
+input[type=text]:focus,
+input[type=email]:active,
+input[type=email]:focus,
+input[type=url]:active,
+input[type=url]:focus,
+select:active,
+select:focus,
+textarea:active,
+textarea:focus {
+	box-shadow: 0 0 5px rgba(0,0,0,.1) inset;
+	background: #fff;
+}
+
+.comment-form-comment {
+	width: 100%;
+}
+
 
 /*--------------------------------------------------------------
 # Infinite scroll
@@ -795,6 +1029,15 @@ a:active {
 /* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
 .infinity-end.neverending .site-footer {
 	display: block;
+}
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+
+.site-footer {
+	padding: 2em;
+	border-top: 1px solid rgba(0,0,0,.1);
 }
 
 /*--------------------------------------------------------------
@@ -835,6 +1078,63 @@ object {
 
 .wp-caption .wp-caption-text {
 	margin: 0.8075em 0;
+}
+
+/*--------------------------------------------------------------
+# Media Queries
+--------------------------------------------------------------*/
+
+@media screen and (min-width: 640px) {
+	.entry-title {
+		font-size: 1.4em;
+	}
+	.page-content,
+	.entry-content,
+	.entry-summary {
+		font-size: 1em;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.entry-title {
+		font-size: 1.6em;
+	}
+	.site {
+		width: 92%;
+		margin: 0 auto;
+		margin-top: 4%;
+		margin-bottom: 4%;
+		background: #fff;
+		border: 1px solid rgba(0,0,0,.1);
+		box-shadow: 0 0 .5em rgba(0, 0, 0, 0.1);
+		padding: 1em 2em;
+	}
+	.site-footer {
+		padding: 2em 0;
+	}
+
+}
+
+
+@media screen and (min-width: 980px) {
+	.entry-title {
+		font-size: 1.8em;
+	}
+	.content-area {
+		width: 70%;
+		float: left;
+	}
+
+	.widget-area {
+		width: 30%;
+		float: right;
+	}
+}
+
+@media screen and (min-width: 1280px) {
+	.entry-title {
+		font-size: 2em;
+	}
 }
 
 /*--------------------------------------------------------------

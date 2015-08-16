@@ -5,6 +5,8 @@
  * Eventually, some of the functionality here could be replaced by core features.
  *
  * @package Amidst Sky
+ * @author Deepak Bansal
+ * @link http://deepak.tech
  */
 
 if ( ! function_exists( 'the_posts_navigation' ) ) :
@@ -83,16 +85,16 @@ function amidstsky_posted_on() {
 	);
 
 	$posted_on = sprintf(
-		esc_html_x( 'Posted on %s', 'post date', 'amidstsky' ),
+		esc_html_x( ' %s', 'post date', 'amidstsky' ),
 		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 	);
 
 	$byline = sprintf(
-		esc_html_x( 'by %s', 'post author', 'amidstsky' ),
+		esc_html_x( '%s', 'post author', 'amidstsky' ),
 		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 	);
 
-	echo '<span class="posted-on">' . $posted_on . '</span><span class="byline"> ' . $byline . '</span>'; // WPCS: XSS OK.
+	echo '<span class="posted-on"><span class="genericon genericon-month"></span>' . $posted_on . '</span><span class="byline"><span class="genericon genericon-user"></span>' . $byline . '</span>'; // WPCS: XSS OK.
 
 }
 endif;
@@ -107,23 +109,23 @@ function amidstsky_entry_footer() {
 		/* translators: used between list items, there is a space after the comma */
 		$categories_list = get_the_category_list( esc_html__( ', ', 'amidstsky' ) );
 		if ( $categories_list && amidstsky_categorized_blog() ) {
-			printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'amidstsky' ) . '</span>', $categories_list ); // WPCS: XSS OK.
+			printf( '<span class="cat-links"><span class="genericon genericon-category"></span>' . esc_html__( '%1$s', 'amidstsky' ) . '</span> ', $categories_list ); // WPCS: XSS OK.
 		}
 
 		/* translators: used between list items, there is a space after the comma */
 		$tags_list = get_the_tag_list( '', esc_html__( ', ', 'amidstsky' ) );
 		if ( $tags_list ) {
-			printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'amidstsky' ) . '</span>', $tags_list ); // WPCS: XSS OK.
+			printf( '<span class="tags-links"><span class="genericon genericon-tag"></span>' . esc_html__( '%1$s', 'amidstsky' ) . '</span> ', $tags_list ); // WPCS: XSS OK.
 		}
 	}
 
 	if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
-		echo '<span class="comments-link">';
+		echo '<span class="comments-link"><span class="genericon genericon-comment"></span>';
 		comments_popup_link( esc_html__( 'Leave a comment', 'amidstsky' ), esc_html__( '1 Comment', 'amidstsky' ), esc_html__( '% Comments', 'amidstsky' ) );
-		echo '</span>';
+		echo '</span> ';
 	}
 
-	edit_post_link( esc_html__( 'Edit', 'amidstsky' ), '<span class="edit-link">', '</span>' );
+	edit_post_link( esc_html__( 'Edit', 'amidstsky' ), '<span class="edit-link"><span class="genericon genericon-edit"></span>', '</span>' );
 }
 endif;
 

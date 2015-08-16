@@ -5,6 +5,8 @@
  * @link https://codex.wordpress.org/Creating_an_Error_404_Page
  *
  * @package Amidst Sky
+ * @author Deepak Bansal
+ * @link http://deepak.tech
  */
 
 get_header(); ?>

@@ -5,6 +5,8 @@
  * Eventually, some of the functionality here could be replaced by core features.
  *
  * @package Amidst Sky
+ * @author Deepak Bansal
+ * @link http://deepak.tech
  */
 
 /**
@@ -69,3 +71,26 @@ if ( version_compare( $GLOBALS['wp_version'], '4.1', '<' ) ) :
 	}
 	add_action( 'wp_head', 'amidstsky_render_title' );
 endif;
+
+/**
+ * Calls Google fonts
+ *
+ * Enqueued in functions.php
+ */
+
+function amidstsky_fonts() {
+    $fonts_url = '';
+	$font_families = array();
+	$font_families[] = 'Libre Baskerville:400,400italic,700';
+	$font_families[] = 'Philosopher:700';
+	$font_families[] = 'Montserrat:400,700';
+
+	$query_args = array(
+		'family' => urlencode( implode( '|', $font_families ) ),
+		'subset' => urlencode( 'latin,latin-ext' ),
+	);
+
+	$fonts_url = add_query_arg( $query_args, '//fonts.googleapis.com/css' );
+
+    return $fonts_url;
+}

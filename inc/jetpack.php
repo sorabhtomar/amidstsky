@@ -2,9 +2,11 @@
 /**
  * Jetpack Compatibility File.
  *
- * @link https://jetpack.me/
+ * See: https://jetpack.me/
  *
  * @package Amidst Sky
+ * @author Deepak Bansal
+ * @link http://deepak.tech
  */
 
 /**
