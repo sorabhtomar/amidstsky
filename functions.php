@@ -83,7 +83,7 @@ function amidstsky_setup() {
 	 * This theme styles the visual editor to resemble the theme style,
 	 * specifically font, colors, icons, and column width.
 	 */
-	add_editor_style( array( 'css/editor-style.css', 'genericons/genericons.css', amidstsky_fonts() ) );
+	add_editor_style( array( 'css/editor-style.css', 'genericons/genericons/genericons.css', amidstsky_fonts() ) );
 }
 endif; // amidstsky_setup
 add_action( 'after_setup_theme', 'amidstsky_setup' );
