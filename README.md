@@ -19,4 +19,4 @@ The theme is in development stage and many more changes are in the way. To insta
 Documentation
 ---------------
 
-Please refer to the documentation website: http://codes.cafe/projects/amidstsky
+Please refer to the documentation website: http://codes.cafe/projects/amidst-sky
