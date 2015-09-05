@@ -5,8 +5,8 @@ Author URI: https://www.codes.cafe
 Tags: translation-ready, custom-background, theme-options, custom-menu, post-formats, threaded-comments, custom-header
 
 Requires at least: 4.0
-Tested up to: 4.2.4
-Stable tag: 1.0.0
+Tested up to: 4.3
+Stable tag: 1.0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -14,12 +14,12 @@ A customizable theme, developed for personal blogs and blogs with longform conte
 
 == Description ==
 
-Amidst Sky is a responsive WordPress theme designed for personal blogs and writers.
+Amidst Sky is a responsive WordPress theme designed for personal blogs and writers. It has one sidebar and 3 footer widgets area. Amidst Sky theme supports aprimary navigation in header and a social networks navigation in the footer of the blog.
 
 == Installation ==
 	
 1. In your admin panel, go to Appearance > Themes and click the Add New button.
-2. Click Upload and Choose File, then select the theme's .zip file. Click Install Now.
+2. Search 'Amidst Sky' and Click Install Now.
 3. Click Activate to use your new theme right away.
 
 == Frequently Asked Questions ==
@@ -27,6 +27,7 @@ Amidst Sky is a responsive WordPress theme designed for personal blogs and write
 = Does this theme support any plugins? =
 
 Amidst Sky includes support for Infinite Scroll in Jetpack.
+It comes with a custom recent posts widget.
 
 == Changelog ==
 
