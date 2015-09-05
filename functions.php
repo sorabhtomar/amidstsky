@@ -46,7 +46,8 @@ function amidstsky_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'primary' => esc_html__( 'Primary Menu', 'amidstsky' ),
+		'primary' => esc_html__( 'Primary Navigation', 'amidstsky' ),
+		'social' => esc_html__( 'Social Navigation', 'amidstsky' ),
 	) );
 
 	/*
@@ -65,13 +66,13 @@ function amidstsky_setup() {
 	 * Enable support for Post Formats.
 	 * See https://developer.wordpress.org/themes/functionality/post-formats/
 	 */
-	add_theme_support( 'post-formats', array(
+	/*add_theme_support( 'post-formats', array(
 		'aside',
 		'image',
 		'video',
 		'quote',
 		'link',
-	) );
+	) );*/
 
 	// Set up the WordPress core custom background feature.
 	add_theme_support( 'custom-background', apply_filters( 'amidstsky_custom_background_args', array(
@@ -115,6 +116,33 @@ function amidstsky_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
+	register_sidebar( array(
+		'name'          => __( 'Left Footer Widgets', 'amidstsky' ),
+		'id'            => 'sidebar-2',
+		'description'   => '',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h4 class="widget-title">',
+		'after_title'   => '</h4>',
+	) );
+	register_sidebar( array(
+		'name'          => __( 'Center Footer Widgets', 'amidstsky' ),
+		'id'            => 'sidebar-3',
+		'description'   => '',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h4 class="widget-title">',
+		'after_title'   => '</h4>',
+	) );
+	register_sidebar( array(
+		'name'          => __( 'Right Footer Widgets', 'amidstsky' ),
+		'id'            => 'sidebar-4',
+		'description'   => '',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h4 class="widget-title">',
+		'after_title'   => '</h4>',
+	) );
 }
 add_action( 'widgets_init', 'amidstsky_widgets_init' );
 
@@ -122,7 +150,9 @@ add_action( 'widgets_init', 'amidstsky_widgets_init' );
  * Enqueue scripts and styles.
  */
 function amidstsky_scripts() {
-	wp_enqueue_style( 'amidstsky-fonts', amidstsky_fonts() );
+	if( ! get_theme_mod( 'amidstsky_google_fonts' ) == '' ) {
+		wp_enqueue_style( 'amidstsky-fonts', amidstsky_fonts() );
+	}
 	wp_enqueue_style( 'amidstsky-style', get_stylesheet_uri() );
 	wp_enqueue_style( 'amidstsky-icons', get_template_directory_uri() . '/genericons/genericons/genericons.css' );
 
@@ -160,3 +190,8 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+/**
+ * Custom Widgets.
+ */
+require get_template_directory() . '/inc/widgets.php';

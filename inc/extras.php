@@ -77,13 +77,12 @@ endif;
  *
  * Enqueued in functions.php
  */
-
 function amidstsky_fonts() {
     $fonts_url = '';
 	$font_families = array();
-	$font_families[] = 'Libre Baskerville:400,400italic,700';
-	$font_families[] = 'Philosopher:700';
-	$font_families[] = 'Montserrat:400,700';
+
+	$font_families[] = get_theme_mod( 'amidstsky_body_font' ) . ':400,400italic,700';
+	$font_families[] = get_theme_mod( 'amidstsky_heading_font' ) . ':700';
 
 	$query_args = array(
 		'family' => urlencode( implode( '|', $font_families ) ),
@@ -93,4 +92,21 @@ function amidstsky_fonts() {
 	$fonts_url = add_query_arg( $query_args, '//fonts.googleapis.com/css' );
 
     return $fonts_url;
+}
+
+/**
+ * Custom Santize for customizer settings like checkbox, radio, select
+ * 
+ */
+
+function amidstsky_sanitize( $input, $setting ) {
+    global $wp_customize;
+ 
+    $control = $wp_customize->get_control( $setting->id );
+ 
+    if ( array_key_exists( $input, $control->choices ) ) {
+        return $input;
+    } else {
+        return $setting->default;
+    }
 }

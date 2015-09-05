@@ -5,6 +5,23 @@
  * support for dropdown menus.
  */
 ( function() {
+
+	var search, searchButton, searchForm;
+
+	search = document.getElementById( 'site-search' );
+
+	searchButton = search.getElementsByTagName( 'button' )[0];
+
+	searchForm = search.getElementsByTagName( 'form' )[0];
+
+	searchButton.onclick = function() {
+		if ( -1 !== search.className.indexOf( 'search-toggled' ) ) {
+			search.className = search.className.replace( ' search-toggled', '' );
+		} else {
+			search.className += ' search-toggled';
+		}
+	};
+
 	var container, button, menu, links, subMenus;
 
 	container = document.getElementById( 'site-navigation' );
@@ -78,4 +95,5 @@
 			self = self.parentElement;
 		}
 	}
+
 } )();

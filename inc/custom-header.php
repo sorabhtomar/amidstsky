@@ -22,7 +22,7 @@ function amidstsky_custom_header_setup() {
 	add_theme_support( 'custom-header', apply_filters( 'amidstsky_custom_header_args', array(
 		'default-image'          => '',
 		'default-text-color'     => '000000',
-		'width'                  => 1200,
+		'width'                  => 1980,
 		'height'                 => 250,
 		'flex-height'            => true,
 		'wp-head-callback'       => 'amidstsky_header_style',

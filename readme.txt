@@ -1,6 +1,7 @@
 === Amidst Sky ===
 
-Contributors: deepakbansal
+Author: Deepak Bansal
+Author URI: https://www.codes.cafe
 Tags: translation-ready, custom-background, theme-options, custom-menu, post-formats, threaded-comments, custom-header
 
 Requires at least: 4.0
@@ -13,7 +14,7 @@ A customizable theme, developed for personal blogs and blogs with longform conte
 
 == Description ==
 
-Amidst Sky is a responsive WordPress theme. It's a standard theme with a minimal layout and bold typography. Amidst Sky is designed for personal blogs and magazines with long-form content.
+Amidst Sky is a responsive WordPress theme designed for personal blogs and writers.
 
 == Installation ==
 	
@@ -32,10 +33,9 @@ Amidst Sky includes support for Infinite Scroll in Jetpack.
 = 1.0 =
 * Initial release
 
-== Credits ==
+== Resources ==
 
 * Based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
 * normalize.css http://necolas.github.io/normalize.css/, (C) 2012-2015 Nicolas Gallagher and Jonathan Neal, [MIT](http://opensource.org/licenses/MIT)
 * Genericons (http://genericons.com/) by Automattic, Inc., [GNU GPLv2 or later] (https://www.gnu.org/licenses/gpl-2.0.html)
-* Google Font Libre Baskerville (https://www.google.com/fonts/specimen/Libre+Baskerville) by Impallari Type, [SIL Open Font License, 1.1] (http://scripts.sil.org/OFL)
-* Google Font Montserrat (https://www.google.com/fonts/specimen/Montserrat) by Julieta Ulanovsky, [SIL Open Font License, 1.1] (http://scripts.sil.org/OFL)
+* Google Fonts License. Refer https://www.google.com/fonts/attribution for license of individual fonts since multiple Google fonts are supported.

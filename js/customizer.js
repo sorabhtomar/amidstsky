@@ -104,7 +104,24 @@
 		} );
 	} );
 
-	wp.customize( 'amidstsky_footer_message', function( value ) {
+	wp.customize( 'amidstsky_footer_bg', function ( value ) {
+		value.bind( function( to ) {
+			$( '.site-footer' ).css( {
+				'background': to
+			} );
+		} );
+	} );
+
+	wp.customize( 'amidstsky_sticky_post_bg', function ( value ) {
+		value.bind( function( to ) {
+			$( '.sticky' ).css( {
+				'background': to,
+				'border-color': to
+			} );
+		} );
+	} );
+
+	wp.customize( 'amidstsky_footer_message', function ( value ) {
 		value.bind( function( to ) {
 			$( '.footer-message' ).text( to );
 		} );

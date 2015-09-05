@@ -17,6 +17,25 @@ function amidstsky_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
 
+	// Setting - Add Logo
+
+	$wp_customize->add_setting(
+		'amidstsky_logo',
+		array(
+			'transport'		=> 'refresh',
+			'sanitize_callback' => 'esc_url_raw'
+		)
+	);
+
+	// Control - Add Logo
+    $wp_customize->add_control( 
+    	new WP_Customize_Image_Control( $wp_customize, 'amidstsky_logo', 
+    	array(
+	        'label'    => __( 'Site Logo (replaces text)', 'amidstsky' ),
+	        'section'  => 'title_tagline',
+	        'settings' => 'amidstsky_logo',
+    ) ) );
+
 	// Setting - Site Main Background Color
 	$wp_customize->add_setting(
 		'amidstsky_site_bg',
@@ -45,7 +64,7 @@ function amidstsky_customize_register( $wp_customize ) {
 		'amidstsky_accent_color',
 		array(
 			'default'		=> '#D32F2F',
-			'transport'		=> 'postMessage',
+			'transport'		=> 'refresh',
 			'sanitize_callback' => 'sanitize_hex_color',
 		)
 	);
@@ -63,7 +82,7 @@ function amidstsky_customize_register( $wp_customize ) {
 		)
 	);
 
-	// Setting - Entry Content Color
+	// Setting - Entry Title Link Color
 	$wp_customize->add_setting(
 		'amidstsky_entry_title_link',
 		array(
@@ -73,7 +92,7 @@ function amidstsky_customize_register( $wp_customize ) {
 		)
 	);
 
-	// Control - Accent Color
+	// Control - Entry Title Link Color
 	$wp_customize->add_control(
 		new WP_Customize_Color_Control (
 			$wp_customize, 'amidstsky_entry_title_link',
@@ -86,7 +105,30 @@ function amidstsky_customize_register( $wp_customize ) {
 		)
 	);
 
-	// Setting - Accent Color
+	// Setting - Sticky Post Background Color
+	$wp_customize->add_setting(
+		'amidstsky_sticky_post_bg',
+		array(
+			'default'		=> '#ccc',
+			'transport'		=> 'refresh',
+			'sanitize_callback' => 'sanitize_hex_color',
+		)
+	);
+
+	// Control - Sticky Post Background Color
+	$wp_customize->add_control(
+		new WP_Customize_Color_Control (
+			$wp_customize, 'amidstsky_sticky_post_bg',
+			array (
+				'label'		=> __( 'Sticky Post Background', 'amidstsky' ),
+				'section'	=> 'colors',
+				'settings'	=> 'amidstsky_sticky_post_bg',
+				'priority'	=> 1
+			)
+		)
+	);
+
+	// Setting - Text Color
 	$wp_customize->add_setting(
 		'amidstsky_text_color',
 		array(
@@ -96,7 +138,7 @@ function amidstsky_customize_register( $wp_customize ) {
 		)
 	);
 
-	// Control - Accent Color
+	// Control - Text Color
 	$wp_customize->add_control(
 		new WP_Customize_Color_Control (
 			$wp_customize, 'amidstsky_text_color',
@@ -119,7 +161,7 @@ function amidstsky_customize_register( $wp_customize ) {
 		)
 	);
 
-	// Control - Accent Color
+	// Control - Entry Content Color
 	$wp_customize->add_control(
 		new WP_Customize_Color_Control (
 			$wp_customize, 'amidstsky_entry_content',
@@ -132,7 +174,7 @@ function amidstsky_customize_register( $wp_customize ) {
 		)
 	);
 
-	// Setting - Entry Content Color
+	// Setting - Menu Link Color
 	$wp_customize->add_setting(
 		'amidstsky_menu_link',
 		array(
@@ -142,7 +184,7 @@ function amidstsky_customize_register( $wp_customize ) {
 		)
 	);
 
-	// Control - Accent Color
+	// Control - Menu Link Color
 	$wp_customize->add_control(
 		new WP_Customize_Color_Control (
 			$wp_customize, 'amidstsky_menu_link',
@@ -155,12 +197,12 @@ function amidstsky_customize_register( $wp_customize ) {
 		)
 	);
 
-	// Setting - Entry Content Color
+	// Setting - Menu Hover Background Color
 	$wp_customize->add_setting(
 		'amidstsky_menu_hover_bg',
 		array(
 			'default'		=> '#eeeeee',
-			'transport'		=> 'postMessage',
+			'transport'		=> 'refresh',
 			'sanitize_callback' => 'sanitize_hex_color',
 		)
 	);
@@ -183,7 +225,7 @@ function amidstsky_customize_register( $wp_customize ) {
 		'amidstsky_submenu_bg',
 		array(
 			'default'		=> '#ffffff',
-			'transport'		=> 'postMessage',
+			'transport'		=> 'refresh',
 			'sanitize_callback' => 'sanitize_hex_color',
 		)
 	);
@@ -198,6 +240,176 @@ function amidstsky_customize_register( $wp_customize ) {
 				'settings'	=> 'amidstsky_submenu_bg',
 				'priority'	=> 1
 			)
+		)
+	);
+
+	// Setting - Entry Content Color
+	$wp_customize->add_setting(
+		'amidstsky_footer_bg',
+		array(
+			'default'		=> '#eeeeee',
+			'transport'		=> 'refresh',
+			'sanitize_callback' => 'sanitize_hex_color',
+		)
+	);
+
+	// Control - Accent Color
+	$wp_customize->add_control(
+		new WP_Customize_Color_Control (
+			$wp_customize, 'amidstsky_footer_bg',
+			array (
+				'label'		=> __( 'Site Footer Background', 'amidstsky' ),
+				'section'	=> 'colors',
+				'settings'	=> 'amidstsky_footer_bg',
+				'priority'	=> 10
+			)
+		)
+	);
+
+	/*------------------------------------------
+	# Layout
+	------------------------------------------*/
+
+	// Section
+	$wp_customize->add_section(
+		'amidstsky_layout',
+		array (
+			'title'			=> __( 'Layout', 'amidstsky' ),
+			'priority'		=> 400
+		)
+	);
+
+	$wp_customize->add_setting(
+		'amidstsky_site_layout',
+		array(
+			'default'	=> true,
+			'transport'	=> 'refresh',
+			'sanitize_callback' => 'amidstsky_sanitize', // function in extras.php
+		)
+	);
+
+	$wp_customize->add_control(
+		'amidstsky_site_layout',
+		array(
+			'section'	=> 'amidstsky_layout',
+			'label'		=> __( 'Boxed Layout', 'amidstsky' ),
+			'setting'	=> 'amidstsky_site_layout',
+			'type'		=> 'checkbox',
+		)
+	);
+
+	$wp_customize->add_setting(
+		'amidstsky_blog_layout',
+		array(
+			'default'	=> 'content_sidebar',
+			'transport'	=> 'refresh',
+			'sanitize_callback' => 'amidstsky_sanitize'
+		)
+	);
+
+	$wp_customize->add_control(
+		'amidstsky_blog_layout',
+		array(
+			'section'	=> 'amidstsky_layout',
+			'label'		=> __( 'Choose Layout', 'amidstsky' ),
+			'setting'	=> 'amidstsky_blog_layout',
+			'type'		=> 'radio',
+			'choices'	=> $layout = array(
+								'content_sidebar' => __( 'Content-Sidebar', 'amidstsky' ), 
+								'sidebar_content' => __( 'Sidebar-Content', 'amidstsky' ),
+								'no_sidebar' => __( 'No Sidebar', 'amidstsky' ),
+							)
+		)
+	);
+
+	/*------------------------------------------
+	# Google Fonts
+	------------------------------------------*/
+
+	// Section
+	$wp_customize->add_section(
+		'amidstsky_fonts',
+		array (
+			'title'			=> __( 'Google Fonts', 'amidstsky' ),
+			'priority'		=> 400
+		)
+	);
+
+	$wp_customize->add_setting(
+		'amidstsky_google_fonts',
+		array(
+			'default'	=> true,
+			'transport'	=> 'refresh',
+			'sanitize_callback' => 'amidstsky_sanitize'
+		)
+	);
+
+	$wp_customize->add_control(
+		'amidstsky_google_fonts',
+		array(
+			'section'	=> 'amidstsky_fonts',
+			'label'		=> __( 'Use Google Fonts', 'amidstsky' ),
+			'setting'	=> 'amidstsky_google_fonts',
+			'type'		=> 'checkbox'
+		)
+	);
+
+
+	$wp_customize->add_setting(
+		'amidstsky_body_font',
+		array(
+			'default'	=> 'Lora',
+			'transport'	=> 'refresh',
+			'sanitize_callback' => 'amidstsky_sanitize'
+		)
+	);
+
+	$wp_customize->add_control(
+		'amidstsky_body_font',
+		array(
+			'section'	=> 'amidstsky_fonts',
+			'label'		=> __( 'Choose Body Font', 'amidstsky' ),
+			'setting'	=> 'amidstsky_body_font',
+			'type'		=> 'select',
+			'choices'	=> $fonts = array(
+								'Open Sans' => 'Open Sans',
+								'Roboto' => 'Roboto',
+								'Lato' => 'Lato',
+								'Lora' => 'Lora',
+								'PT Serif' => 'PT Serif',
+								'Droid Serif' => 'Droid Serif',
+								'Cardo' => 'Cardo',
+								'Crimson Text' => 'Crimson Text',
+							)
+		)
+	);
+
+	$wp_customize->add_setting(
+		'amidstsky_heading_font',
+		array(
+			'default'	=> 'Montserrat',
+			'transport'	=> 'refresh',
+			'sanitize_callback' => 'amidstsky_sanitize'
+		)
+	);
+
+	$wp_customize->add_control(
+		'amidstsky_heading_font',
+		array(
+			'section'	=> 'amidstsky_fonts',
+			'label'		=> __( 'Choose Headings Font', 'amidstsky' ),
+			'setting'	=> 'amidstsky_heading_font',
+			'type'		=> 'select',
+			'choices'	=> $fonts = array(
+								'Montserrat' => 'Montserrat',
+								'Oswald' => 'Oswald',
+								'Open Sans' => 'Open Sans',
+								'Roboto' => 'Roboto',
+								'Lato' => 'Lato',
+								'Lora' => 'Lora',
+								'PT Sans' => 'PT Sans',
+								'Droid Sans' => 'Droid Sans',
+							)
 		)
 	);
 
@@ -287,10 +499,42 @@ function amidstsky_customize_css() {
 		color: <?php echo esc_attr( get_theme_mod( 'amidstsky_text_color' ) ); ?>;
 	}
 
+	<?php 
+	
+	if( ! get_theme_mod( 'amidstsky_google_fonts' ) == '' ) { ?>
+
+		body,
+		input,
+		textarea {
+			font-family: "<?php echo esc_attr( get_theme_mod( 'amidstsky_body_font' ) ); ?>";
+		}
+
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			font-family: "<?php echo esc_attr( get_theme_mod( 'amidstsky_heading_font' ) ); ?>";
+		}
+
+	<?php }
+	
+	?>
+
 	.page-content,
 	.entry-content,
 	.entry-summary {
 		color: <?php echo esc_attr( get_theme_mod( 'amidstsky_entry_content' ) ); ?>;
+	}
+
+	.sticky {
+		background: <?php echo esc_attr( get_theme_mod( 'amidstsky_sticky_post_bg' ) ); ?>;
+		border-color: <?php echo esc_attr( get_theme_mod( 'amidstsky_sticky_post_bg' ) ); ?>;
+	}
+
+	blockquote {
+		border-color: <?php echo esc_attr( get_theme_mod( 'amidstsky_sticky_post_bg' ) ); ?>;
 	}
 
 	.main-navigation ul ul {
@@ -300,6 +544,44 @@ function amidstsky_customize_css() {
 	.main-navigation li:hover > a,
 	.main-navigation li.focus > a {
 		background: <?php echo esc_attr( get_theme_mod( 'amidstsky_menu_hover_bg' ) ); ?>;
+	}
+
+	<?php if( get_theme_mod( 'amidstsky_blog_layout' ) == 'sidebar_content' ) { ?>
+
+		.content-area {
+			float: right;
+		}
+
+		#secondary {
+			float: left;
+		}
+
+	<?php } elseif ( get_theme_mod( 'amidstsky_blog_layout' ) == 'no_sidebar' ) { ?>
+
+		.content-area {
+			margin: 0 auto;
+			float: none;
+		}
+		
+	<?php } ?>
+
+	<?php if( ! get_theme_mod( 'amidstsky_site_layout' ) == '' ) { ?>
+		
+		@media screen and (min-width: 769px) {
+
+			.site {
+				width: 90%;
+				margin-top: 4%;
+				margin-bottom: 4%;
+			}
+
+		}
+
+
+	<?php } ?>
+
+	.site-footer {
+		background: <?php echo esc_attr( get_theme_mod( 'amidstsky_footer_bg' ) ); ?>;
 	}
 
 	</style>
