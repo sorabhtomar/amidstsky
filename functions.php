@@ -194,4 +194,4 @@ require get_template_directory() . '/inc/jetpack.php';
 /**
  * Custom Widgets.
  */
-require get_template_directory() . '/inc/widgets.php';
+require get_template_directory() . '/inc/custom-widgets.php';
