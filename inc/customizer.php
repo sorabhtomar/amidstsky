@@ -284,7 +284,7 @@ function amidstsky_customize_register( $wp_customize ) {
 		array(
 			'default'	=> true,
 			'transport'	=> 'refresh',
-			'sanitize_callback' => 'amidstsky_sanitize', // function in extras.php
+			'sanitize_callback' => 'amidstsky_sanitize_checkbox', // function in extras.php
 		)
 	);
 
@@ -303,7 +303,7 @@ function amidstsky_customize_register( $wp_customize ) {
 		array(
 			'default'	=> 'content_sidebar',
 			'transport'	=> 'refresh',
-			'sanitize_callback' => 'amidstsky_sanitize_checkbox'
+			'sanitize_callback' => 'amidstsky_sanitize'
 		)
 	);
 
@@ -340,7 +340,7 @@ function amidstsky_customize_register( $wp_customize ) {
 		array(
 			'default'	=> true,
 			'transport'	=> 'refresh',
-			'sanitize_callback' => 'amidstsky_sanitize'
+			'sanitize_callback' => 'amidstsky_sanitize_checkbox'
 		)
 	);
 
@@ -360,7 +360,7 @@ function amidstsky_customize_register( $wp_customize ) {
 		array(
 			'default'	=> 'Lora',
 			'transport'	=> 'refresh',
-			'sanitize_callback' => 'amidstsky_sanitize_checkbox'
+			'sanitize_callback' => 'amidstsky_sanitize'
 		)
 	);
 

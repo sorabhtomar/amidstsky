@@ -110,7 +110,10 @@ function amidstsky_sanitize( $input, $setting ) {
         return $setting->default;		
     }
 }
-
 function amidstsky_sanitize_checkbox( $input ) {
-	return ( ( isset( $input ) && true == $input ) ? true : false );
+    if ( $input == 1 ) {
+        return 1;
+    } else {
+        return '';
+    }
 }
