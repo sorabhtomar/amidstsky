@@ -303,7 +303,7 @@ function amidstsky_customize_register( $wp_customize ) {
 		array(
 			'default'	=> 'content_sidebar',
 			'transport'	=> 'refresh',
-			'sanitize_callback' => 'amidstsky_sanitize'
+			'sanitize_callback' => 'amidstsky_sanitize_checkbox'
 		)
 	);
 
@@ -360,7 +360,7 @@ function amidstsky_customize_register( $wp_customize ) {
 		array(
 			'default'	=> 'Lora',
 			'transport'	=> 'refresh',
-			'sanitize_callback' => 'amidstsky_sanitize'
+			'sanitize_callback' => 'amidstsky_sanitize_checkbox'
 		)
 	);
 

@@ -107,6 +107,10 @@ function amidstsky_sanitize( $input, $setting ) {
     if ( array_key_exists( $input, $control->choices ) ) {
         return $input;
     } else {
-        return $setting->default;
+        return $setting->default;		
     }
+}
+
+function amidstsky_sanitize_checkbox( $input ) {
+	return ( ( isset( $input ) && true == $input ) ? true : false );
 }
