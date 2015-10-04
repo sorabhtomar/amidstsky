@@ -31,7 +31,7 @@ function amidstsky_customize_register( $wp_customize ) {
     $wp_customize->add_control( 
     	new WP_Customize_Image_Control( $wp_customize, 'amidstsky_logo', 
     	array(
-	        'label'    => __( 'Site Logo (replaces text)', 'amidstsky' ),
+	        'label'    => __( 'Site Logo (replaces text)', 'amidst-sky' ),
 	        'section'  => 'title_tagline',
 	        'settings' => 'amidstsky_logo',
     ) ) );
@@ -51,7 +51,7 @@ function amidstsky_customize_register( $wp_customize ) {
 		new WP_Customize_Color_Control (
 			$wp_customize, 'amidstsky_site_bg',
 			array (
-				'label'		=> __( 'Site Content Background', 'amidstsky' ),
+				'label'		=> __( 'Site Content Background', 'amidst-sky' ),
 				'section'	=> 'colors',
 				'settings'	=> 'amidstsky_site_bg',
 				'priority'	=> 1
@@ -74,7 +74,7 @@ function amidstsky_customize_register( $wp_customize ) {
 		new WP_Customize_Color_Control (
 			$wp_customize, 'amidstsky_accent_color',
 			array (
-				'label'		=> __( 'Accent Color', 'amidstsky' ),
+				'label'		=> __( 'Accent Color', 'amidst-sky' ),
 				'section'	=> 'colors',
 				'settings'	=> 'amidstsky_accent_color',
 				'priority'	=> 1
@@ -97,7 +97,7 @@ function amidstsky_customize_register( $wp_customize ) {
 		new WP_Customize_Color_Control (
 			$wp_customize, 'amidstsky_entry_title_link',
 			array (
-				'label'		=> __( 'Entry Title Link', 'amidstsky' ),
+				'label'		=> __( 'Entry Title Link', 'amidst-sky' ),
 				'section'	=> 'colors',
 				'settings'	=> 'amidstsky_entry_title_link',
 				'priority'	=> 1
@@ -120,7 +120,7 @@ function amidstsky_customize_register( $wp_customize ) {
 		new WP_Customize_Color_Control (
 			$wp_customize, 'amidstsky_sticky_post_bg',
 			array (
-				'label'		=> __( 'Sticky Post Background', 'amidstsky' ),
+				'label'		=> __( 'Sticky Post Background', 'amidst-sky' ),
 				'section'	=> 'colors',
 				'settings'	=> 'amidstsky_sticky_post_bg',
 				'priority'	=> 1
@@ -143,7 +143,7 @@ function amidstsky_customize_register( $wp_customize ) {
 		new WP_Customize_Color_Control (
 			$wp_customize, 'amidstsky_text_color',
 			array (
-				'label'		=> __( 'Text Color', 'amidstsky' ),
+				'label'		=> __( 'Text Color', 'amidst-sky' ),
 				'section'	=> 'colors',
 				'settings'	=> 'amidstsky_text_color',
 				'priority'	=> 1
@@ -166,7 +166,7 @@ function amidstsky_customize_register( $wp_customize ) {
 		new WP_Customize_Color_Control (
 			$wp_customize, 'amidstsky_entry_content',
 			array (
-				'label'		=> __( 'Entry Content', 'amidstsky' ),
+				'label'		=> __( 'Entry Content', 'amidst-sky' ),
 				'section'	=> 'colors',
 				'settings'	=> 'amidstsky_entry_content',
 				'priority'	=> 1
@@ -189,7 +189,7 @@ function amidstsky_customize_register( $wp_customize ) {
 		new WP_Customize_Color_Control (
 			$wp_customize, 'amidstsky_menu_link',
 			array (
-				'label'		=> __( 'Navigation Links', 'amidstsky' ),
+				'label'		=> __( 'Navigation Links', 'amidst-sky' ),
 				'section'	=> 'colors',
 				'settings'	=> 'amidstsky_menu_link',
 				'priority'	=> 1
@@ -212,7 +212,7 @@ function amidstsky_customize_register( $wp_customize ) {
 		new WP_Customize_Color_Control (
 			$wp_customize, 'amidstsky_menu_hover_bg',
 			array (
-				'label'		=> __( 'Menu Item Hover Background', 'amidstsky' ),
+				'label'		=> __( 'Menu Item Hover Background', 'amidst-sky' ),
 				'section'	=> 'colors',
 				'settings'	=> 'amidstsky_menu_hover_bg',
 				'priority'	=> 1
@@ -235,7 +235,7 @@ function amidstsky_customize_register( $wp_customize ) {
 		new WP_Customize_Color_Control (
 			$wp_customize, 'amidstsky_submenu_bg',
 			array (
-				'label'		=> __( 'Sub Menu Background', 'amidstsky' ),
+				'label'		=> __( 'Sub Menu Background', 'amidst-sky' ),
 				'section'	=> 'colors',
 				'settings'	=> 'amidstsky_submenu_bg',
 				'priority'	=> 1
@@ -258,7 +258,7 @@ function amidstsky_customize_register( $wp_customize ) {
 		new WP_Customize_Color_Control (
 			$wp_customize, 'amidstsky_footer_bg',
 			array (
-				'label'		=> __( 'Site Footer Background', 'amidstsky' ),
+				'label'		=> __( 'Site Footer Background', 'amidst-sky' ),
 				'section'	=> 'colors',
 				'settings'	=> 'amidstsky_footer_bg',
 				'priority'	=> 10
@@ -274,7 +274,7 @@ function amidstsky_customize_register( $wp_customize ) {
 	$wp_customize->add_section(
 		'amidstsky_layout',
 		array (
-			'title'			=> __( 'Layout', 'amidstsky' ),
+			'title'			=> __( 'Layout', 'amidst-sky' ),
 			'priority'		=> 400
 		)
 	);
@@ -292,7 +292,7 @@ function amidstsky_customize_register( $wp_customize ) {
 		'amidstsky_site_layout',
 		array(
 			'section'	=> 'amidstsky_layout',
-			'label'		=> __( 'Boxed Layout', 'amidstsky' ),
+			'label'		=> __( 'Boxed Layout', 'amidst-sky' ),
 			'setting'	=> 'amidstsky_site_layout',
 			'type'		=> 'checkbox',
 		)
@@ -311,13 +311,13 @@ function amidstsky_customize_register( $wp_customize ) {
 		'amidstsky_blog_layout',
 		array(
 			'section'	=> 'amidstsky_layout',
-			'label'		=> __( 'Choose Layout', 'amidstsky' ),
+			'label'		=> __( 'Choose Layout', 'amidst-sky' ),
 			'setting'	=> 'amidstsky_blog_layout',
 			'type'		=> 'radio',
 			'choices'	=> $layout = array(
-								'content_sidebar' => __( 'Content-Sidebar', 'amidstsky' ), 
-								'sidebar_content' => __( 'Sidebar-Content', 'amidstsky' ),
-								'no_sidebar' => __( 'No Sidebar', 'amidstsky' ),
+								'content_sidebar' => __( 'Content-Sidebar', 'amidst-sky' ), 
+								'sidebar_content' => __( 'Sidebar-Content', 'amidst-sky' ),
+								'no_sidebar' => __( 'No Sidebar', 'amidst-sky' ),
 							)
 		)
 	);
@@ -330,7 +330,7 @@ function amidstsky_customize_register( $wp_customize ) {
 	$wp_customize->add_section(
 		'amidstsky_fonts',
 		array (
-			'title'			=> __( 'Google Fonts', 'amidstsky' ),
+			'title'			=> __( 'Google Fonts', 'amidst-sky' ),
 			'priority'		=> 400
 		)
 	);
@@ -348,7 +348,7 @@ function amidstsky_customize_register( $wp_customize ) {
 		'amidstsky_google_fonts',
 		array(
 			'section'	=> 'amidstsky_fonts',
-			'label'		=> __( 'Use Google Fonts', 'amidstsky' ),
+			'label'		=> __( 'Use Google Fonts', 'amidst-sky' ),
 			'setting'	=> 'amidstsky_google_fonts',
 			'type'		=> 'checkbox'
 		)
@@ -368,7 +368,7 @@ function amidstsky_customize_register( $wp_customize ) {
 		'amidstsky_body_font',
 		array(
 			'section'	=> 'amidstsky_fonts',
-			'label'		=> __( 'Choose Body Font', 'amidstsky' ),
+			'label'		=> __( 'Choose Body Font', 'amidst-sky' ),
 			'setting'	=> 'amidstsky_body_font',
 			'type'		=> 'select',
 			'choices'	=> $fonts = array(
@@ -397,7 +397,7 @@ function amidstsky_customize_register( $wp_customize ) {
 		'amidstsky_heading_font',
 		array(
 			'section'	=> 'amidstsky_fonts',
-			'label'		=> __( 'Choose Headings Font', 'amidstsky' ),
+			'label'		=> __( 'Choose Headings Font', 'amidst-sky' ),
 			'setting'	=> 'amidstsky_heading_font',
 			'type'		=> 'select',
 			'choices'	=> $fonts = array(
@@ -421,8 +421,8 @@ function amidstsky_customize_register( $wp_customize ) {
 	$wp_customize->add_section(
 		'amidstsky_theme_options',
 		array (
-			'title'			=> __( 'Theme Options', 'amidstsky' ),
-			'description'	=> __('More options.', 'amidstsky' ),
+			'title'			=> __( 'Theme Options', 'amidst-sky' ),
+			'description'	=> __('More options.', 'amidst-sky' ),
 			'priority'		=> 500
 		)
 	);
@@ -442,7 +442,7 @@ function amidstsky_customize_register( $wp_customize ) {
 		'amidstsky_footer_message',
 		array(
 			'section'		=> 'amidstsky_theme_options',
-			'label'			=> __( 'Footer Message', 'amidstsky' ),
+			'label'			=> __( 'Footer Message', 'amidst-sky' ),
 			'type'			=> 'text'
 		)
 	);
@@ -454,7 +454,6 @@ add_action( 'customize_register', 'amidstsky_customize_register' );
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
 function amidstsky_customize_preview() {
-	wp_enqueue_script( 'jquery' );
 	wp_enqueue_script( 'amidstsky_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'jquery', 'customize-preview' ), '20150816', true );
 }
 add_action( 'customize_preview_init', 'amidstsky_customize_preview' );
@@ -546,7 +545,7 @@ function amidstsky_customize_css() {
 		background: <?php echo esc_attr( get_theme_mod( 'amidstsky_menu_hover_bg' ) ); ?>;
 	}
 
-	<?php if( get_theme_mod( 'amidstsky_blog_layout' ) == 'sidebar_content' ) { ?>
+	<?php if(esc_attr( get_theme_mod( 'amidstsky_blog_layout' ) == 'sidebar_content' )) { ?>
 
 		.content-area {
 			float: right;
@@ -556,7 +555,7 @@ function amidstsky_customize_css() {
 			float: left;
 		}
 
-	<?php } elseif ( get_theme_mod( 'amidstsky_blog_layout' ) == 'no_sidebar' ) { ?>
+	<?php } elseif ( esc_attr(get_theme_mod( 'amidstsky_blog_layout' ) == 'no_sidebar') ) { ?>
 
 		.content-area {
 			margin: 0 auto;
@@ -565,7 +564,7 @@ function amidstsky_customize_css() {
 		
 	<?php } ?>
 
-	<?php if( ! get_theme_mod( 'amidstsky_site_layout' ) == '' ) { ?>
+	<?php if( ! esc_attr(get_theme_mod( 'amidstsky_site_layout' ) == '' ) ) { ?>
 		
 		@media screen and (min-width: 769px) {
 

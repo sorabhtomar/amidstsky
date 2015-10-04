@@ -22,9 +22,9 @@ function amidstsky_setup() {
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
 	 * If you're building a theme based on Amidst Sky, use a find and replace
-	 * to change 'amidstsky' to the name of your theme in all the template files
+	 * to change 'amidst-sky' to the name of your theme in all the template files
 	 */
-	load_theme_textdomain( 'amidstsky', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'amidst-sky', get_template_directory() . '/languages' );
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
@@ -46,8 +46,8 @@ function amidstsky_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'primary' => esc_html__( 'Primary Navigation', 'amidstsky' ),
-		'social' => esc_html__( 'Social Navigation', 'amidstsky' ),
+		'primary' => esc_html__( 'Primary Navigation', 'amidst-sky' ),
+		'social' => esc_html__( 'Social Navigation', 'amidst-sky' ),
 	) );
 
 	/*
@@ -62,18 +62,7 @@ function amidstsky_setup() {
 		'caption',
 	) );
 
-	/*
-	 * Enable support for Post Formats.
-	 * See https://developer.wordpress.org/themes/functionality/post-formats/
-	 */
-	/*add_theme_support( 'post-formats', array(
-		'aside',
-		'image',
-		'video',
-		'quote',
-		'link',
-	) );*/
-
+	
 	// Set up the WordPress core custom background feature.
 	add_theme_support( 'custom-background', apply_filters( 'amidstsky_custom_background_args', array(
 		'default-color' => 'eeeeee',
@@ -108,7 +97,7 @@ add_action( 'after_setup_theme', 'amidstsky_content_width', 0 );
  */
 function amidstsky_widgets_init() {
 	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'amidstsky' ),
+		'name'          => esc_html__( 'Sidebar', 'amidst-sky' ),
 		'id'            => 'sidebar-1',
 		'description'   => '',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
@@ -117,7 +106,7 @@ function amidstsky_widgets_init() {
 		'after_title'   => '</h2>',
 	) );
 	register_sidebar( array(
-		'name'          => __( 'Left Footer Widgets', 'amidstsky' ),
+		'name'          => __( 'Left Footer Widgets', 'amidst-sky' ),
 		'id'            => 'sidebar-2',
 		'description'   => '',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
@@ -126,7 +115,7 @@ function amidstsky_widgets_init() {
 		'after_title'   => '</h4>',
 	) );
 	register_sidebar( array(
-		'name'          => __( 'Center Footer Widgets', 'amidstsky' ),
+		'name'          => __( 'Center Footer Widgets', 'amidst-sky' ),
 		'id'            => 'sidebar-3',
 		'description'   => '',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
@@ -135,7 +124,7 @@ function amidstsky_widgets_init() {
 		'after_title'   => '</h4>',
 	) );
 	register_sidebar( array(
-		'name'          => __( 'Right Footer Widgets', 'amidstsky' ),
+		'name'          => __( 'Right Footer Widgets', 'amidst-sky' ),
 		'id'            => 'sidebar-4',
 		'description'   => '',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',

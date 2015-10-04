@@ -18,9 +18,9 @@ class Amidst_Sky_Widget_Recent_Posts extends WP_Widget {
 	public function __construct() {
 		$widget_ops = array(
 			'classname' 	=> 'amidstsky-recent-posts',
-			'description' 	=> __( 'Widgte Displaying Recent Posts for Amidst Sky Theme', 'amidstsky')
+			'description' 	=> __( 'Widgte Displaying Recent Posts for Amidst Sky Theme', 'amidst-sky')
 		);
-		parent::__construct( 'io-rp', __('Amidst Sky Recent Posts','amidstsky'), $widget_ops);
+		parent::__construct( 'io-rp', __('Amidst Sky Recent Posts','amidst-sky'), $widget_ops);
 
 		$this->alt_option_name = 'amidstsky-recent-posts';
 
@@ -50,7 +50,7 @@ class Amidst_Sky_Widget_Recent_Posts extends WP_Widget {
 
 		ob_start();
 
-		$title = ( ! empty( $instance['title'] ) ) ? $instance['title'] : __( 'Recently Posted', 'amidstsky' );
+		$title = ( ! empty( $instance['title'] ) ) ? $instance['title'] : __( 'Recently Posted', 'amidst-sky' );
 
 		/** This filter is documented in wp-includes/default-widgets.php */
 
@@ -138,19 +138,19 @@ class Amidst_Sky_Widget_Recent_Posts extends WP_Widget {
 		$taxonomy  = isset( $instance['taxonomy'] ) ? esc_attr( $instance['taxonomy'] ) : '';
 ?>
 
-		<p><label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:', 'amidstsky' ); ?></label>
+		<p><label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:', 'amidst-sky' ); ?></label>
 
 		<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo $title; ?>" /></p>
 
-		<p><label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php _e( 'Number of posts to show:', 'amidstsky' ); ?></label>
+		<p><label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php _e( 'Number of posts to show:', 'amidst-sky' ); ?></label>
 
 		<input id="<?php echo $this->get_field_id( 'number' ); ?>" name="<?php echo $this->get_field_name( 'number' ); ?>" type="text" value="<?php echo $number; ?>" size="3" /></p>
 
 		<p><input class="checkbox" type="checkbox" <?php checked( $show_date ); ?> id="<?php echo $this->get_field_id( 'show_date' ); ?>" name="<?php echo $this->get_field_name( 'show_date' ); ?>" />
 
-		<label for="<?php echo $this->get_field_id( 'show_date' ); ?>"><?php _e( 'Display post date?', 'amidstsky' ); ?></label></p>
+		<label for="<?php echo $this->get_field_id( 'show_date' ); ?>"><?php _e( 'Display post date?', 'amidst-sky' ); ?></label></p>
 
-		<p><label for="<?php echo $this->get_field_id( 'taxonomy' ); ?>"><?php _e( 'Categories (Enter IDs e.g. 2,4,10):', 'amidstsky' ); ?></label>
+		<p><label for="<?php echo $this->get_field_id( 'taxonomy' ); ?>"><?php _e( 'Categories (Enter IDs e.g. 2,4,10):', 'amidst-sky' ); ?></label>
 
 		<input class="widefat" id="<?php echo $this->get_field_id( 'taxonomy' ); ?>" name="<?php echo $this->get_field_name( 'taxonomy' ); ?>" type="text" value="<?php echo $taxonomy; ?>" /></p>
 
