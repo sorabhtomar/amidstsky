@@ -81,8 +81,8 @@ function amidstsky_fonts() {
     $fonts_url = '';
 	$font_families = array();
 
-	$font_families[] = get_theme_mod( 'amidstsky_body_font' ) . ':400,400italic,700';
-	$font_families[] = get_theme_mod( 'amidstsky_heading_font' ) . ':700';
+	$font_families[] = esc_attr(get_theme_mod( 'amidstsky_body_font' )) . ':400,400italic,700';
+	$font_families[] = esc_attr(get_theme_mod( 'amidstsky_heading_font' )) . ':700';
 
 	$query_args = array(
 		'family' => urlencode( implode( '|', $font_families ) ),

@@ -431,7 +431,7 @@ function amidstsky_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'amidstsky_footer_message',
 		array(
-			'default'		=> 'Copyright 2015 All rights reserved.',
+			'default'		=> __( 'Copyright 2015', 'amidst-sky' ),
 			'transport'		=> 'postMessage',
 			'sanitize_callback' => 'sanitize_text_field'
 		)

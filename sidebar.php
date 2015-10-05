@@ -7,7 +7,7 @@
  * @link http://deepak.tech
  */
 
-if ( ! is_active_sidebar( 'sidebar-1' ) || get_theme_mod( 'amidstsky_blog_layout' ) == 'no_sidebar' ) {
+if ( ! is_active_sidebar( 'sidebar-1' ) || esc_attr(get_theme_mod( 'amidstsky_blog_layout' )) == 'no_sidebar' ) {
 	return;
 }
 ?>

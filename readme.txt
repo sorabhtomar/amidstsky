@@ -14,7 +14,9 @@ A customizable theme, developed for personal blogs and blogs with longform conte
 
 == Description ==
 
-Amidst Sky is a responsive WordPress theme designed for personal blogs and writers. It has one sidebar and 3 footer widgets area. Amidst Sky theme supports aprimary navigation in header and a social networks navigation in the footer of the blog.
+Amidst Sky is a responsive WordPress theme designed for personal blogs and writers. It has one sidebar and 3 footer widgets area. Amidst Sky theme supports a primary navigation in header and a social networks navigation in the footer of the blog.
+
+It comes with a custom Recent Posts widget with which you can display posts from catgeories of your choice with or without post date.
 
 == Installation ==
 	
@@ -40,4 +42,3 @@ It comes with a custom recent posts widget.
 * normalize.css http://necolas.github.io/normalize.css/, (C) 2012-2015 Nicolas Gallagher and Jonathan Neal, [MIT](http://opensource.org/licenses/MIT)
 * Genericons (http://genericons.com/) by Automattic, Inc., [GNU GPLv2 or later] (https://www.gnu.org/licenses/gpl-2.0.html)
 * Google Fonts License. Refer https://www.google.com/fonts/attribution for license of individual fonts since multiple Google fonts are supported.
-* Images in screenshot from http://unsplash.com and http://pixabay.com avaiable royalty and copyright free with no attribution requirements.
