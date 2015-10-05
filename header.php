@@ -30,7 +30,7 @@
 		<div class="site-branding">
 			<?php if ( get_theme_mod( 'amidstsky_logo' ) ) : ?>
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" id="site-logo" title="<?php bloginfo( 'name' ); ?>" rel="home">
-					<img src="<?php echo esc_url_raw(get_theme_mod( 'amidstsky_logo' )); ?>" alt="<?php bloginfo( 'name' ); ?>">
+					<img src="<?php echo esc_url(get_theme_mod( 'amidstsky_logo' )); ?>" alt="<?php bloginfo( 'name' ); ?>">
 				</a>
  
     		<?php else : ?>
