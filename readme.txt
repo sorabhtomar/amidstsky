@@ -33,6 +33,25 @@ It comes with a custom recent posts widget.
 
 == Changelog ==
 
+= 1.0.5 =
+* Fixed few bugs
+* Added custom recent posts widget
+
+= 1.0.4 =
+* Added responsive footer widget area
+* Support for boxed layout
+
+= 1.0.3 =
+* Added logo support
+* Added social navigation
+
+= 1.0.2 =
+* Added layout manager
+* Addressed few bugs
+
+= 1.0.1 =
+* Added theme options
+
 = 1.0 =
 * Initial release
 
