@@ -4,7 +4,7 @@
  *
  * @package Amidst Sky
  * @author Deepak Bansal
- * @link http://deepak.tech
+ * @link http://www.dbansal.com
  */
 
 if ( ! is_active_sidebar( 'sidebar-1' ) || esc_attr(get_theme_mod( 'amidstsky_blog_layout' )) == 'no_sidebar' ) {

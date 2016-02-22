@@ -1,7 +1,7 @@
 # Amidst Sky
 
 Author: Deepak Bansal
-Author URI: https://www.codes.cafe
+Author URI: https://www.dbansal.com
 Tags: translation-ready, custom-background, theme-options, custom-menu, post-formats, threaded-comments, custom-header
 
 Requires at least: 4.0
@@ -10,7 +10,7 @@ Stable tag: 1.0.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-![Amidst Sky](http://deepak.tech/assets/images/portfolio/amidstsky.png)
+![Amidst Sky](http://www.dbansal.com/assets/images/portfolio/amidstsky.png)
 
 A customizable theme, developed for personal blogs and blogs with longform content.
 

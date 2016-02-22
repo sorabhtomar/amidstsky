@@ -7,7 +7,7 @@
  * Description: Widgte Displaying Recent Posts for Amidst Sky Theme
  * Version: 1.0
  * Author: Deepak Bansal
- * Author URI: http://deepak.tech
+ * Author URI: http://www.dbansal.com
  */
 
 class Amidst_Sky_Widget_Recent_Posts extends WP_Widget {

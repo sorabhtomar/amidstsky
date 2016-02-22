@@ -8,7 +8,7 @@
  *
  * @package Amidst Sky
  * @author Deepak Bansal
- * @link http://deepak.tech
+ * @link http://www.dbansal.com
  */
 
 ?>
@@ -20,7 +20,7 @@
 		<div class="site-info">
 			<span class="footer-message"><?php echo esc_attr( get_theme_mod( 'amidstsky_footer_message' ) ); ?></span>
 			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Designed by %1$s.', 'amidst-sky' ), '<a href="https://www.codes.cafe" rel="designer">Deepak Bansal</a>' ); ?>
+			<?php printf( esc_html__( 'Designed by %1$s.', 'amidst-sky' ), '<a href="https://www.dbansal.com" rel="designer">Deepak Bansal</a>' ); ?>
 		</div><!-- .site-info -->
 		<nav class="social-networks">
 			<?php wp_nav_menu( array( 

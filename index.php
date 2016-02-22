@@ -11,7 +11,7 @@
  *
  * @package Amidst Sky
  * @author Deepak Bansal
- * @link http://deepak.tech
+ * @link http://www.dbansal.com
  */
 
 get_header(); ?>
